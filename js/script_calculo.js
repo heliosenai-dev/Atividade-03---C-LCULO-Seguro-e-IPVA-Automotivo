@@ -1,29 +1,28 @@
-export function calcularIPVA(valor, combustivel, ano){
-
+export function calcularIPVA(valor, combustivel, ano) {
     let anoAtual = new Date().getFullYear();
     let idade = anoAtual - ano;
 
-    if(idade > 20){
+    // Regra de isenção
+    if (idade > 20) {
         return "Isento";
     }
 
-    if(combustivel == "gasolina"){
-        return valor * 0.20;
-    }
+    // Tabela de taxas mapeada em um objeto
+    const taxas = {
+        "gasolina": 0.20,
+        "etanol": 0.15,
+        "bicombustivel": 0.10,
+        "hibrido": 0.08,
+        "eletrico": 0.02
+    };
 
-    if(combustivel == "etanol"){
-        return valor * 0.15;
-    }
+    // Busca a taxa correspondente ao combustível escolhido
+    let taxaAplicada = taxas[combustivel];
 
-    if(combustivel == "bicombustivel"){
-        return valor * 0.10;
-    }
-
-    if(combustivel == "hibrido"){
-        return valor * 0.08;
-    }
-
-    if(combustivel == "eletrico"){
-        return valor * 0.02;
+    // Se o combustível existir na lista, calcula o valor. Se não, retorna um aviso.
+    if (taxaAplicada !== undefined) {
+        return valor * taxaAplicada;
+    } else {
+        return "Tipo de combustível inválido";
     }
 }

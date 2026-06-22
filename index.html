@@ -5,56 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CÁLCULO Seguro e IPVA Automotivo</title>
 </head>
-<form id="formVeiculo">
-
-    <input type="text" id="marca" placeholder="Marca" required>
-
-    <input type="text" id="modelo" placeholder="Modelo" required>
-
-    <input type="text" id="placa" placeholder="Placa" required>
-
-    <input type="number" id="ano" placeholder="Ano" required>
-
-    <input type="number" id="valor" placeholder="Valor do veículo" required>
-
-    <br><br>
-
-    <label>
-        <input type="radio" name="combustivel" value="gasolina" checked>
-        Gasolina
-    </label>
-
-    <label>
-        <input type="radio" name="combustivel" value="etanol">
-        Etanol
-    </label>
-
-    <label>
-        <input type="radio" name="combustivel" value="bicombustivel">
-        Bicombustível
-    </label>
-
-    <label>
-        <input type="radio" name="combustivel" value="hibrido">
-        Híbrido
-    </label>
-
-    <label>
-        <input type="radio" name="combustivel" value="eletrico">
-        Elétrico
-    </label>
-
-    <br><br>
-    <button type="submit">Adicionar</button>
-
-</form>
-
-<h2>Veículos Cadastrados</h2>
-
-<div id="lista"></div>
-
-<script src="js/script_veiculo.js" defer></script>
 <body>
     
+    <form id="formVeiculo">
+        <input type="text" id="marca" placeholder="Marca" required>
+        <input type="text" id="modelo" placeholder="Modelo" required>
+        <input type="text" id="placa" placeholder="Placa" required>
+        <input type="number" id="ano" placeholder="Ano" required>
+        <input type="number" id="valor" placeholder="Valor do veículo" required>
+
+        <br><br>
+
+        <label>
+            <input type="radio" name="combustivel" value="gasolina" checked>
+            Gasolina
+        </label>
+
+        <label>
+            <input type="radio" name="combustivel" value="etanol">
+            Etanol
+        </label>
+
+        <label>
+            <input type="radio" name="combustivel" value="bicombustivel">
+            Bicombustível
+        </label>
+
+        <label>
+            <input type="radio" name="combustivel" value="hibrido">
+            Híbrido
+        </label>
+
+        <label>
+            <input type="radio" name="combustivel" value="eletrico">
+            Elétrico
+        </label>
+
+        <br><br>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Veículos Cadastrados</h2>
+    <div id="lista"></div>
+
+    <script type="module" src="js/script_veiculo.js" defer></script>
+
 </body>
 </html>
