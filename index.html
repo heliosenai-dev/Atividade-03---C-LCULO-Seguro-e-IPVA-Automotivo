@@ -5,29 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CÁLCULO Seguro e IPVA Automotivo</title>
 </head>
-<h1>Cadastro do Veiculo</h1>
+<form id="formVeiculo">
 
-<form id="formVeiculo"></form>
+    <input type="text" id="marca" placeholder="Marca" required>
 
- <label>Informe o Modelo:</label>
-    <input type="text" id="modelo"><br><br>
+    <input type="text" id="modelo" placeholder="Modelo" required>
 
-    <label>Informe a Marca:</label>
-    <input type="text" id="marca"><br><br>
+    <input type="text" id="placa" placeholder="Placa" required>
 
-    <label>Informe a Placa do seu Veiculo:</label>
-    <input type="text" id="placa"><br><br>
+    <input type="number" id="ano" placeholder="Ano" required>
 
-    <label>Informe o Ano de Fábrica do seu Veiculo:</label>
-    <input type="text" id="ano"><br><br>
+    <input type="number" id="valor" placeholder="Valor do veículo" required>
 
-    <label>Qual o valor de mercado do seu veiculo:</label>
-    <input type="text" id="valor"><br><br>
+    <br><br>
 
-    <label>Qual o tipo de combustivel utilizado:</label>
-    <input type="text" id="combustivel"><br><br>
-    
+    <label>
+        <input type="radio" name="combustivel" value="gasolina" checked>
+        Gasolina
+    </label>
 
+    <label>
+        <input type="radio" name="combustivel" value="etanol">
+        Etanol
+    </label>
+
+    <label>
+        <input type="radio" name="combustivel" value="bicombustivel">
+        Bicombustível
+    </label>
+
+    <label>
+        <input type="radio" name="combustivel" value="hibrido">
+        Híbrido
+    </label>
+
+    <label>
+        <input type="radio" name="combustivel" value="eletrico">
+        Elétrico
+    </label>
+
+    <br><br>
+
+    <button type="submit">Adicionar</button>
+
+</form>
+
+<h2>Veículos Cadastrados</h2>
+
+<div id="lista"></div>
+
+<script src="js/script_veiculo.js" defer></script>
 <body>
     
 </body>
